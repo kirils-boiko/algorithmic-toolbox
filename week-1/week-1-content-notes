@@ -1,0 +1,15 @@
+
+
+STRESS TESTING
+A technique for generating thousands of test with the goal of finding a test case for
+which your solution fails.
+
+Stress testing consists of four parts:
+    1. Implementation of an algorithm.
+    2. An alternative, trivial and slow, but correct implementation of an algorithm.
+    3. A random test generator.
+    4. An infinite loop in which a new test if generated and fed into both implementations
+        to compared the results. If their results differ, the test and both answers are
+        output, and the program stop, otherwise the loop repeats.
+
+
