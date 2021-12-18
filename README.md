@@ -19,16 +19,18 @@ The course main focus is on practicing algorithms implementations, standard and 
     - Algorithms covered:
       - _Sum of Two Digits_
       - _Maximum Pairwise Product_ 
- - [ ] Week 2: Algorithmic Warm-Up
+ - [x] Week 2: Algorithmic Warm-Up
     - Computing Runtimes
     - Asymptotic Notations
     - Logarithms
     - Algorithms covered:
-      - _Fibonacci Number_
-      - _Last Digit of a Large Fibonacci Number_
       - _Greatest Common Divisor_
       - _Least Common Multiple_
+      -  _Fibonacci Number_
+      - _Last Digit of a Fibonacci Number_
+      - _Fibonacci Number Modulo M_
       - _Last Digit of the Sum of Fibonacci Numbers_
+      - _Last Digit of the Partial Sum of Fibonacci Numbers_
       - _Last Digit of the Sum of Squares of Fibonacci Numbers_  
  - [ ] Week 3: Greedy Algorithms 
  - [ ] Week 4: Divide-and-Conquer Algorithms
