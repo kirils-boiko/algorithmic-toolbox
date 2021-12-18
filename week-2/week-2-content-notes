@@ -1,0 +1,86 @@
+
+
+COMPUTING RUNTIMES
+ - Individual line operations might differ in the amount of work they require
+  (e.g., creating an array takes more time than simple lookups and assignments);
+ - Finding a fundamentally accurate measure of runtime can be a lot of mess (i.e., lots
+    of additional data);
+ - To compute the actual runtime of even simple programs, you need to know things such
+    as computer speed, system architecture, type of compiler used, memory hierarchy
+    details (i.e., cache vs RAM vs hard disk);
+ - Thus, it is infeasible to evaluate algorithm performance based on the actual runtime;
+ - A nice and handy alternative is to measure runtime w/o knowing these details and
+    getting results that work for large inputs using asymptotic notation.
+
+
+ASYMPTOTIC NOTATION
+ - Asymptotic runtimes describe how the runtime scales with the input size;
+ - Measure of runtime that ignores the constant multiples of the runtimes;
+ - Asymptotic runtimes comparison:
+    logn < sqrt(n) < n < nlogn < n^2 < 2^n
+
+
+BIG-O NOTATION
+Definition: f(n) = O(g(n)) (f is Big-O of g) or f <= g if there exist constants N and c
+    so that for all n >= N, f(n) <= c * g(n). In other words, f is bound above
+    by some constant multiple of g.
+Example:
+    - 3nˆ2 + 5n + 2 = O(nˆ2) since if n >= 1,
+        3nˆ2 + 5n + 2 <= 3n^2 + 5n^2 + 2n^2 = 10n^2
+Advantages of using Big-O notation:
+    - clarifies growth rate;
+    - cleans up notation (O(n^2) vs. 3n^2 + 5n + 2);
+        note: logx(n) differ by constant multiples, so no need to specify log base;
+    - can ignore complicated runtime details;
+Disadvantages:
+    - important info about constant multiples is lost;
+    - Big-O is asymptotic only (useful mostly for really large inputs);
+
+
+USING BIG-O NOTATION
+Common rules:
+    - multiplicative constants can be omitted:
+        7n^3 = O(n^2), (n^2)/3 = O(n^2);
+    - when two powers are present, the one with the larger exponent grows faster
+        n^a < n^b for 0 < a < b:
+        n = O(n^2), sqrt(n) = O(n);
+    - the exponential always grows faster than polynomial
+        n^a < b^n (a > 0, b > 1):
+        n^5 = O(sqrt(2)^n), n^100 = O(1.1^n);
+    - any power of logn grows slower than any power of n
+        (logn)^a < n^b (a,b > 0):
+        (logn)^3 = O(sqrt(n)), nlogn = O(n^2);
+    - smaller terms can be omitted:
+        n^2 + n = O(n^2), 2^n + n^9 = O(2^n);
+
+Big-O in practice(FibList(n) algorithm):
+    create an array F[0...n]            O(n)
+    F[0] <- 0                           O(1)
+    F[1] <- 1                           O(1)
+    for i from 2 to n:                  O(n)
+        F[i] <- F[i-1] + F[i-2]         O(n)    (addition of Fibonacci is prop. to n)
+    return F[n]                         O(1)
+O(n) + O(1) + O(1) + O(n) * O(n) + O(1) = O(n^2)
+
+
+OTHER NOTATIONS
+Omega definition (lower bound): Ω(g(n)) or f >= g if for some c,
+    f(n) >= c * g(n) (f grows no slower than g).
+Theta definition (tight bound): ϴ(g(n)) or f ~ g if f = O(g) and
+    f = Ω(g) (f grows at the same rate as g).
+Little-o definition: f(n) = o(g(n)) of f < g if f(n)/g(n) -> 0 as
+    n -> ∞ (f grows strictly slower than g, constant can be as small as you like)
+
+
+NOTES
+ - There is no generic procedure to create algorithms.
+ - Finding algorithm often requires unique insights.
+ - Three common algorithmic design techniques:
+    - greedy algorithms (keep making optimal local decisions to arrive at global optimum)
+    - divide and conquer (break the problem into pieces, solve them, and bund together)
+    - dynamic programming (keeping track of solutions to smaller parts of algorithm along)
+ - Levels of design:
+    - naive algorithm: definition -> algorithm (very slow, brute force)
+    - standard tools algorithm
+    - optimized standard tools algorithm
+    - magic algorithm aka unique insight algorithm

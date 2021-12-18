@@ -5,12 +5,12 @@ public class ConstraintTest {
     public static void main(String[] args) {
 
         // edge case test (maximum number of elements)
-        System.out.println("Maximum pairwise product: constraint testing.\n");
+        System.out.println("Constraint testing: Maximum Pairwise Product.\n");
         System.out.println("Constraint test: maximum number of elements, n = 2 * 10ˆ5.");
 
         long startTime = System.currentTimeMillis();
         int[] largeArray = new int[20000000];
-        //MaximumPairwiseProductNaive.maximumPairwiseProduct(largeArray);
+        MaximumPairwiseProductNaive.maximumPairwiseProduct(largeArray);
         System.out.println("Naive implementation execution time: " + (System.currentTimeMillis() - startTime) + " milliseconds");
 
         startTime = System.currentTimeMillis();
