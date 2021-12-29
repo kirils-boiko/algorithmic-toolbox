@@ -1,0 +1,55 @@
+
+GENERIC GREEDY ALGORITHM STRATEGY
+    1. Make some greedy choice
+    2. Reduct to a smaller problem
+    3. Iterate
+
+
+GREEDY STRATEGY FOR LARGEST NUMBER
+    1. Find max
+    2. Append to a new list
+    3. Remove from original list
+    4. Repeat until no digits are left in original list
+
+
+GREEDY STRATEGY FOR CAR FUELING
+    Potential greedy choices:
+        - refill at the closest gas station
+        - refill at the farthest reachable gas station
+        - go until there is no fuel
+    Strategy:
+        1. Start at A
+        2. Refill at the farthest reachable gas station G
+        3. Make G the new A
+        4. Get from new A to B with minimum number of refills
+    Proof:
+        - Route R with the minimum number of refills
+        - G1 = position of first refill in R
+        - G2 = next stop in R (refill or B)
+        - G = farthest refill reachable from A
+        - If G is closer than G2, refill at G instead of G1
+        - Otherwise, avoid refill at G1 (and even G2, and refill at G)
+
+
+TERMINOLOGY
+    - subproblem = a similar problem of smaller size
+        (e.g., LargestNumber(3,9,5,9) = "9" + LargestNumber(3,5,9))
+    - safe move = a greedy choice which is consistent with an optimal solution
+
+
+MAIN INGREDIENTS OF GREEDY ALGORITHMS
+    - Reduction to subproblem:
+        1. Make a first move
+        2. Solve a problem of the same kind but smaller
+            (fewer digits, fewer fuel stations)
+    - Safe move: the first move consistent with optimal solution
+    - General strategy:
+        1. Make a greedy choice
+        2. Prove that it is a safe move
+        3. Reduce to a subproblem
+        4. Solve the subproblem
+        5. Iterate until there is no problems left
+
+OPTIMIZATION OF GREEDY ALGORITHMS
+    - Sorting the array is O(nlogn) and can add convenience to the greedy
+        algorithm essentially improving its asymptotics
