@@ -26,13 +26,23 @@ The course main focus is on practicing algorithms implementations, standard and 
     - Algorithms covered:
       - _Greatest Common Divisor_
       - _Least Common Multiple_
-      -  _Fibonacci Number_
+      - _Fibonacci Number_
       - _Last Digit of a Fibonacci Number_
       - _Fibonacci Number Modulo M_
       - _Last Digit of the Sum of Fibonacci Numbers_
       - _Last Digit of the Partial Sum of Fibonacci Numbers_
       - _Last Digit of the Sum of Squares of Fibonacci Numbers_  
- - [ ] Week 3: Greedy Algorithms 
+ - [x] Week 3: Greedy Algorithms 
+    - Generic Greedy Algorithm Strategy
+    - Main Ingredients of Greedy Algorithms
+    - Algorithms covered:
+      - _Money Change_
+      - _Maximum Value of the Loot / Fractional Knapsack_
+      - _Car Fueling_
+      - _Maximum Ad Revenue / Maximum Dot Product_
+      - _Collecting Signatures / Covering Segments by Points_
+      - _Maximum Number of Prizes / Different Summands_
+      - _Maximum Salary / Largest Number_   
  - [ ] Week 4: Divide-and-Conquer Algorithms
  - [ ] Week 5: Dynamic Programming 1
  - [ ] Week 6: Dynamic Programming 2 
